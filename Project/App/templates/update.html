@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container mt-4">
+	<div class="card col-md-6 mx-auto">
+		<div class="card-body">
+			<h3>Update info here</h3>
+			<!--<a href="{% url 'showdetails' %}" class="btn btn-outline-warning">Back</a>-->
+			<form method="POST">
+				{% csrf_token %}
+				<input type="text" name="name" class="form-control my-2" value="{{data.name}}">
+				<input type="email" name="email" class="form-control my-2" value="{{data.email}}">
+				<div class="row">
+				<div class="col">
+					<a href="{% url 'showdetails' %}" class="btn btn-outline-warning col-sm my-2 form-control">Back</a>
+				</div>
+				<div class="col">
+					<input type="submit" value = "Update" class="btn btn-outline-success col-sm my-2 form-control">
+				</div>
+			</div>
+			</form>
+			
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>

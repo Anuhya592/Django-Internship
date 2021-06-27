@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+<div class="container mt-4">
+	<div class="card col-md-6 mx-auto">
+		<div class="card-body">
+			<h2>Delete user</h2>
+			<h3>Are you sure to delete {{data.name}}</h3>
+			<div class="row">
+				<div class="col">
+					<form method="POST">
+						{% csrf_token %}
+						<input type="submit" value="Yes" class="btn btn-outline-danger col-sm form-control">
+					</form>
+					
+				</div>
+				<div class="col">
+					<a href="{% url 'delete' data.id %}" class="btn btn-outline-warning form-control col-sm">Delete</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

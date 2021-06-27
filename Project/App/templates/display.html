@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display info</title>
+</head>
+<body >
+	<h3> Hi {{uname}}</h3>
+	<table border="1">
+		<tr>
+			<thead>
+				<th>User name</th>
+				<th>Roll no</th>
+				<th>Email id</th>
+			</thead>
+		</tr>
+		<tr>
+			<tbody>
+				<td>{{uname}}</td>
+				<td>{{rollno}}</td>
+				<td>{{email_id}}</td>
+			</tbody>
+		</tr>
+	</table>
+</body>
+</html>
